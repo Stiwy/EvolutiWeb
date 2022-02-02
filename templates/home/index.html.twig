@@ -3,11 +3,13 @@
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 
     <div id="hero">
         <div id="hero-bg" class="pt-20"></div>
         <div id="hero-left">
-            <b>Une agence qui s'adapte au petit comme au grande entreprise.</b>
+            <b>Une agence qui s'adapte au petite comme au grande entreprise.</b>
+            <h3>Création de site vitrine, e-commerce, application web ERP / CRM sur-mesure.</h3>
         </div>
         <div id="hero-right">
             <!-- Slider main container -->
@@ -15,34 +17,30 @@
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
-                    <div class="swiper-slide">Slide 1</div>
-                    <div class="swiper-slide">Slide 2</div>
-                    <div class="swiper-slide">Slide 3</div>
-                    ...
+                    <div class="swiper-slide" style="background: url({{ asset('assets/hero.jpeg') }});">Slide 1</div>
+                    <div class="swiper-slide" style="background: url({{ asset('assets/hero2.jpeg') }}); background-position-x: center;">Slide 2</div>
+                    <div class="swiper-slide" style="background: purple">Slide 3</div>
                 </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-
-                <!-- If we need scrollbar -->
-                <div class="swiper-scrollbar"></div>
             </div>
         </div>
 
-        <form class="">
-            <div>
-                <input type="text">
-            </div>
-            <div>
-                <input type="text">
-            </div>
-            <button type="submit">Demander un devis</button>
-        </form>
-
+        {{ render(controller( 'App\\Controller\\QuoteController::index' )) }}
 
     </div>
 
+    <!-- Initialize Swiper -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            loop: true,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true,
+            },
+            autoplay: {
+                delay: 4000,
+            },
+        });
+    </script>
 {% endblock %}
