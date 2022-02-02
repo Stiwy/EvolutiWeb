@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+
+    <div id="hero">
+        <div id="hero-bg" class="pt-20"></div>
+        <div id="hero-left">
+            <b>Une agence qui s'adapte au petit comme au grande entreprise.</b>
+        </div>
+        <div id="hero-right">
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    ...
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </div>
+
+        <form class="">
+            <div>
+                <input type="text">
+            </div>
+            <div>
+                <input type="text">
+            </div>
+            <button type="submit">Demander un devis</button>
+        </form>
+
+
+    </div>
+
+{% endblock %}

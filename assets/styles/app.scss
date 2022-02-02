@@ -1,0 +1,67 @@
+//Header
+header {
+    background-color:white;
+    transform: rotate(359deg);
+    width: 100vw;
+    height: 100px;
+    margin-top: -12px;
+    box-shadow: 1px 9px 13px #cedee3;
+    position: fixed;
+    z-index: 10000;
+    border-bottom: 2px #e3e2e2 solid;
+
+    b {
+        color: lightblue;
+        font-size: 2rem;
+        letter-spacing: 1.2px;
+        transform: rotate(359deg);
+    }
+}
+
+//Hero
+#hero{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+
+    #hero-bg {
+        margin-left: -10vw;
+        width: 100vw;
+        height: 90%;
+        background: linear-gradient(0.25turn, lightblue, white);
+        transform: rotate(356deg);
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #hero-left {
+        position: absolute;
+        top: 100px;
+        width: 75%;
+        padding: 100px 15%;
+
+        b {
+            font-size: 3rem;
+            color: #676767;
+            text-transform: uppercase;
+        }
+    }
+
+    #hero-right {
+        height: 100%;
+        width: 25%;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    form {
+        position: absolute;
+        z-index: 2;
+        background: white;
+        bottom: 10%;
+        left: 10%;
+        padding: 15px;
+        border-radius: 15px;
+    }
+}
