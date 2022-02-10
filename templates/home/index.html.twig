@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Stiwy Caritey{% endblock %}
 
 {% block body %}
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
@@ -8,39 +8,193 @@
     <div id="hero">
         <div id="hero-bg" class="pt-20"></div>
         <div id="hero-left">
-            <b>Une agence qui s'adapte au petite comme au grande entreprise.</b>
+            <b>Des prix qui s'adapte au petite comme au grande entreprise.</b>
             <h3>Création de site vitrine, e-commerce, application web ERP / CRM sur-mesure.</h3>
         </div>
         <div id="hero-right">
-            <!-- Slider main container -->
-            <div class="swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide" style="background: url({{ asset('assets/hero.jpeg') }});">Slide 1</div>
-                    <div class="swiper-slide" style="background: url({{ asset('assets/hero2.jpeg') }}); background-position-x: center;">Slide 2</div>
-                    <div class="swiper-slide" style="background: purple">Slide 3</div>
+            {% include '/home/_slider.html.twig' %}
+        </div>
+
+        <div id="hero-advantage">
+            {{ form_start(quoteForm) }}
+                <div class="flex">
+                    {{ form_row(quoteForm.type) }}
+                    {{ form_row(quoteForm.budget) }}
+                </div>
+
+                <div class="flex">
+                    {{ form_row(quoteForm.submit) }}
+                    <div>
+                        <a href="">Nous contacter</a>
+                    </div>
+                </div>
+            {{ form_end(quoteForm) }}
+        </div>
+    </div>
+
+    <div id="home-1">
+        <p>Nos points forts</p>
+        <div class="flex">
+            <div>
+                <i class="fas fa-ruler"></i>
+                <h3>Un site sûr mesure</h3>
+                <p>Nous étudions ensemble vos besoins afin d'établir un cahier des charges et des modèles qui répondent à vos attentes.</p>
+            </div>
+            <div>
+                <i class="fas fa-hand-holding-usd"></i>
+                <h3>Des tarif adapté aux besoins</h3>
+                <p>Nos tarif sont évaluer selon, la compléxité du projet et le temps de création. </p>
+            </div>
+            <div>
+                <i class="fas fa-binoculars"></i>
+                <h3>Un suivi constant du projet</h3>
+                <p>Nous étudions ensemble vos besoins afin d'établir un cahier des charges et des modèles qui répondent à vos attentes.</p>
+            </div>
+            <div>
+                <i class="fas fa-file-invoice-dollar"></i>
+                <h3>Des devis gratuit</h3>
+                <p>Nous établissons un pré-devis en ligne puis un devis complet par mail ou téléphone gratuitement.</p>
+            </div>
+            <div>
+                <i class="fas fa-briefcase"></i>
+                <h3>A distance ou en présentiel</h3>
+                <p>Afin de facilité les échange, je peux me déplacer dans vos locaux, pour des rendez-vous ou pour de la formation.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="hero-2">
+        <div class="border-top"></div>
+        <p>Déroulement du projet</p>
+        <div>
+            <div class="bar">
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+            </div>
+            <div class="items">
+                <div class="left"></div>
+                <div class="circle">
+                    1
+                </div>
+                <div class="right content">
+                    <h5>Réalisation du devis</h5>
+                    <p>Réaliser une demande de devis en ligne. Puis nos vous répondons par e-mail afin de vous proposer un premier devis gratuit fondé sur les informations fournies.</p>
+                </div>
+            </div>
+            <div class="items">
+                <div class="left content">
+                    <h5>Rendez-vous</h5>
+                    <p>Parlons de votre projet ensemble lors d'un rendez-vous (En présentiel où à distance), et convenons des détails du projet ensemble affin détaillé vos attentes et vos besoins. Nous pourrons ainsi convenir du prix final</p>
+                </div>
+                <div class="circle">2</div>
+                <div class="right"></div>
+            </div>
+            <div class="items">
+                <div class="left"></div>
+                <div class="circle">3</div>
+                <div class="right content">
+                    <h5>Présentation du projet</h5>
+                    <p>Je vous présente des model graphiques de votre site, avant début de la création.</p>
+                </div>
+
+            </div>
+            <div class="items">
+                <div class="left content">
+                    <h5>Réalisation</h5>
+                    <p>Je développe le site, tout en vous laissant l'accès à ce dernier pour voir l'avancée du projet.</p>
+                </div>
+                <div class="circle">4</div>
+                <div class="right"></div>
+            </div>
+            <div class="items">
+                <div class="left"></div>
+                <div class="circle">5</div>
+                <div class="right content">
+                    <h5>Vérification</h5>
+                    <p>À la fin du développement nous vérifions ensemble que le site convient à vos attentes et nous procédons au dernier test.</p>
+                </div>
+            </div>
+            <div class="items">
+                <div class="left content">
+                    <h5>Présentation et formation</h5>
+                    <p>Je procècede à la présentation complète du site et à la formation de l'utilisation de ce dernier.</p>
+                </div>
+                <div class="circle">6</div>
+                <div class="right"></div>
+            </div>
+            <div class="items">
+                <div class="left"></div>
+                <div class="circle">7</div>
+                <div class="right content">
+                    <h5>Support</h5>
+                    <p>En cas de problème, de nouveau développement, ou de mises à jour je reste disponible pour vous aider à faire évoluer votre site.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="hero-3">
+        <div class="border-top"></div>
+        <p>Mon expertise</p>
+
+        <div class="grid">
+            <div class="case">
+                <img src="{{ asset('assets/site_vitrine.png') }}" alt="">
+                <div>
+                    <p>Site vitrine</p>
+                </div>
+            </div>
+            <div class="case">
+                <img src="{{ asset('assets/e-commerce.png') }}" alt="">
+                <div>
+                    <p>E-commerce</p>
+                </div>
+            </div>
+            <div class="case">
+                <img src="{{ asset('assets/marketplace.png') }}" alt="">
+                <div>
+                    <p>Marketplace</p>
+                </div>
+            </div>
+            <div class="case">
+                <img src="{{ asset('assets/reseau_social.png') }}" alt="">
+                <div>
+                    <p>Réseau social</p>
+                </div>
+            </div>
+            <div class="case">
+                <img src="{{ asset('assets/blog.png') }}" alt="">
+                <div>
+                    <p>Blog</p>
+                </div>
+            </div>
+            <div class="case">
+                <img src="{{ asset('assets/administration.png') }}" alt="">
+                <div>
+                    <p>Administration</p>
+                </div>
+            </div>
+            <div class="case">
+                <img src="{{ asset('assets/intranet.png') }}" alt="">
+                <div>
+                    <p>Intranet</p>
+                </div>
+            </div>
+            <div class="case">
+                <img src="{{ asset('assets/erp.png') }}" alt="">
+                <div>
+                    <p>ERP</p>
+                </div>
+            </div>
+            <div class="case">
+                <img src="{{ asset('assets/crm.png') }}" alt="">
+                <div>
+                    <p>CRM</p>
                 </div>
             </div>
         </div>
 
-        {{ render(controller( 'App\\Controller\\QuoteController::index' )) }}
-
     </div>
 
-    <!-- Initialize Swiper -->
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script>
-        const swiper = new Swiper('.swiper', {
-            // Optional parameters
-            loop: true,
-            effect: 'fade',
-            fadeEffect: {
-                crossFade: true,
-            },
-            autoplay: {
-                delay: 4000,
-            },
-        });
-    </script>
 {% endblock %}

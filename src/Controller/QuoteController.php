@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Classes\Quote;
+use App\Models\Quote;
 use App\Form\QuoteType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;

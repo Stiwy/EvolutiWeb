@@ -1,0 +1,26 @@
+<!-- Slider main container -->
+<div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide" style="background: url({{ asset('assets/hero.jpeg') }});">Slide 1</div>
+        <div class="swiper-slide" style="background: url({{ asset('assets/hero2.jpeg') }}); background-position-x: center;">Slide 2</div>
+        <div class="swiper-slide" style="background: purple">Slide 3</div>
+    </div>
+</div>
+
+<!-- Initialize Swiper -->
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        loop: true,
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true,
+        },
+        autoplay: {
+            delay: 4000,
+        },
+    });
+</script>

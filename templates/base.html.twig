@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        <link rel="icon" href="{{ asset('favicon.ico') }}">
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
@@ -18,5 +18,40 @@
         {% include "/partials/_header.html.twig" %}
 
         {% block body %}{% endblock %}
+
+        <footer>
+            <div class="border-top"></div>
+            <img src="{{ asset('favicon.ico') }}" alt="">
+            <p>Vous avez un projet ?</p>
+
+            <div class="content">
+                <a class="btn-left"  href="#">Demander un devis</a>
+                ou
+                <a class="btn-right" href="#">Me contacter</a>
+            </div>
+
+            <div class="coordonate">
+                <div>
+                    <p>Téléphone</p>
+                    <a href="tel:0768644285">07 68 64 42 85</a>
+                </div>
+                <div>
+                    <p>Téléphone</p>
+                    <a href="mailto:caritey@protonmail.com?subject=Demande d'information&body=Bonjour Stiwy">caritey@protonmail.com</a>
+                </div>
+                <div>
+                    <p>Réseaux</p>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook-square"></i></a>
+                    <a href=""><i class="fa-brands fa-github-square"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram-square"></i></a>
+                </div>
+            </div>
+
+            <div class="border-bottom">
+                Copyright &copy; 2021 - 2022 | created by Stiwy Caritey
+            </div>
+        </footer>
     </body>
 </html>
