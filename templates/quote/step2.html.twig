@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Demande de devis - Stiwy Caritey{% endblock %}
+
+{% block body %}
+    <div id="page">
+        <div id="progressbar">
+            <section class="bar">
+                <span></span>
+                <div><div></div></div>
+            </section>
+            <a href="{{ path('app_quote_step_1') }}" class="step">
+                <span>Votre projet</span>
+                <div class="step-valid">1</div>
+            </a>
+            <a href="{{ path('app_quote_step_2') }}" class="step">
+                <span class="span-active">Votre Entreprise</span>
+                <div>2</div>
+            </a>
+            <div class="step">
+                <span>Vos coordonées</span>
+                <div>3</div>
+            </div>
+            <div class="step">
+                <span>Résultat</span>
+                <div>4</div>
+            </div>
+        </div>
+        <div id="form">
+            {{ form_start(quoteForm) }}
+                {{ form_row(quoteForm.company_size) }}
+                {{ form_row(quoteForm.company_name) }}
+                <div class="flex">
+                    <a href="{{ path('app_quote_step_1') }}">Précédent</a>
+                    {{ form_row(quoteForm.submit) }}
+                </div>
+            {{ form_end(quoteForm) }}
+        </div>
+    </div>
+{% endblock %}

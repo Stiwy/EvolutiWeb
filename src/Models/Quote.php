@@ -66,19 +66,19 @@ class Quote
         return $this->start_project_date;
     }
 
-    public function setStartProjectDate(\DateTimeInterface $start_project_date): self
+    public function setStartProjectDate(?\DateTimeInterface $start_project_date): self
     {
         $this->start_project_date = $start_project_date;
 
         return $this;
     }
 
-    public function getBudget(): ?int
+    public function getBudget()
     {
         return $this->budget;
     }
 
-    public function setBudget(?int $budget): self
+    public function setBudget($budget): self
     {
         $this->budget = $budget;
 

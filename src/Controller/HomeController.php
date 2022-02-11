@@ -17,12 +17,9 @@ use Symfony\Component\Validator\Constraints\Type;
 
 class HomeController extends AbstractController
 {
-    #[Route('/', name: 'home')]
+    #[Route('/', name: 'app_home')]
     public function index(): Response
     {
-        $quote = new Quote();
-        $quoteForm = $this->createForm(QuoteHomeType::class, $quote);
-
-        return $this->renderForm('home/index.html.twig', compact('quoteForm'));
+        return $this->renderForm('home/index.html.twig');
     }
 }

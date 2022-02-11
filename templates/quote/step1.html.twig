@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Demande de devis - Stiwy Caritey{% endblock %}
+
+{% block body %}
+    <div id="page">
+        <div id="progressbar">
+            <section class="bar">
+                <span></span>
+                <div><div></div></div>
+            </section>
+            <a href="{{ path('app_quote_step_1') }}" class="step">
+                <span class="span-active">Votre projet</span>
+                <div>1</div>
+            </a>
+            <div class="step">
+                <span>Votre Entreprise</span>
+                <div>2</div>
+            </div>
+            <div class="step">
+                <span>Vos coordonées</span>
+                <div>3</div>
+            </div>
+            <div class="step">
+                <span>Résultat</span>
+                <div>4</div>
+            </div>
+        </div>
+        <div id="form">
+            {{ form_start(quoteForm) }}
+                <div class="flash-error">
+                    {{ form_errors(quoteForm.type) }}
+                    {{ form_errors(quoteForm.budget) }}
+                    {{ form_errors(quoteForm.admin_panel) }}
+                    {{ form_errors(quoteForm.start_project_date) }}
+                    {{ form_errors(quoteForm.details) }}
+                </div>
+
+                <div>
+                    {{ form_label(quoteForm.type) }}
+                    {{ form_widget(quoteForm.type) }}
+                </div>
+                <div>
+                    {{ form_label(quoteForm.budget) }}
+                    {{ form_widget(quoteForm.budget) }}
+                </div>
+                <div>
+                    {{ form_label(quoteForm.admin_panel) }}
+                    {{ form_widget(quoteForm.admin_panel) }}
+                </div>
+                <div>
+                    {{ form_label(quoteForm.start_project_date) }}
+                    {{ form_widget(quoteForm.start_project_date) }}
+                </div>
+                <div>
+                    {{ form_label(quoteForm.details) }}
+                    {{ form_widget(quoteForm.details) }}
+                </div>
+                <div class="flex">
+                    <a href="{{ path('app_home') }}">Retour</a>
+                    {{ form_row(quoteForm.submit) }}
+                </div>
+            {{ form_end(quoteForm) }}
+        </div>
+    </div>
+{% endblock %}

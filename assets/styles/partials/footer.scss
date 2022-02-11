@@ -1,0 +1,119 @@
+.body {
+  padding-top: 130px;
+  min-height: 100vh;
+  margin-bottom: -300px;
+}
+
+.footer, .minBody {
+  height: 300px;
+}
+
+footer {
+  height: 300px;
+  background: linear-gradient(90deg, lightblue, rgb(255, 255, 255));
+  position: relative;
+  text-align: center;
+  padding-top: -15px;
+
+  .border-top {
+    width: 100vw;
+    height: 200px;
+    background: linear-gradient(90deg, lightblue, rgb(255, 255, 255));
+    z-index: -1;
+    transform: rotate(3deg);
+    position: absolute;
+    bottom: 180px;
+    left: -10px;
+  }
+
+  > img {
+    width: 60px;
+    margin: -25px auto 0 auto;
+  }
+
+  > p {
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: #8c8a8a;
+    font-weight: lighter;
+  }
+
+  .content {
+    text-align: center;
+    color: #8c8a8a;
+    font-size: 1rem;
+    font-weight: lighter;
+    letter-spacing: 3px;
+    font-style: oblique;
+    text-transform: uppercase;
+
+    a {
+      font-size: 1rem;
+      border: unset;
+      border-radius: 5px;
+      text-decoration: none;
+      text-transform: initial;
+      text-align: center;
+      color: white;
+      padding: 8px 16px;
+      font-style: normal;
+      font-weight: 700;
+      letter-spacing: normal;
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+
+    .btn-left {
+      background: #f88379;
+      margin-right: 30px;
+    }
+
+    .btn-right {
+      background: lightblue;
+      margin-left: 30px;
+    }
+  }
+
+  .coordonate {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+
+    p {
+      color: gray;
+      margin-bottom: unset;
+      font-family: 'rounded-bold';
+
+    }
+
+    a {
+      color: #125771;
+      text-decoration: none;
+      margin: 0 5px;
+      transition: .5s 0s color ease-in-out;
+
+      &:hover {
+        color: #f88379;
+      }
+
+      svg {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .border-bottom {
+    position: absolute;
+    bottom: 0;
+    background: #125771;
+    width: 100%;
+    color: whitesmoke;
+    text-align: center;
+    padding: 5px 0;
+    font-family: rounded-light;
+    letter-spacing: 2px;
+    font-size: .7rem;
+  }
+}

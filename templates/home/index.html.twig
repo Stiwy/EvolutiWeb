@@ -16,19 +16,38 @@
         </div>
 
         <div id="hero-advantage">
-            {{ form_start(quoteForm) }}
+            <form name="quote_home" method="post" action="{{ path('app_quote_step_1') }}">
                 <div class="flex">
-                    {{ form_row(quoteForm.type) }}
-                    {{ form_row(quoteForm.budget) }}
+                    <div>
+                        <label class="form-label required" for="quote_home_type">Que souhaitez-vous créer ?</label>
+                        <select id="quote_home_type" name="quote_home[type]" class="form-input">
+                            <option value="Site_e-commerce">Site e-commerce</option>
+                            <option value="Site_vitrine">Site vitrine</option>
+                            <option value="Site_marketplace">Site marketplace</option>
+                            <option value="Réseau_social">Réseau social</option>
+                            <option value="Blog">Blog</option>
+                            <option value="Intranets">Intranets</option>
+                            <option value="Administration">Administration</option>
+                            <option value="ERP">ERP</option>
+                            <option value="CRM">CRM</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="form-label" for="quote_home_budget">Budget pour le projet</label>
+                        <input type="number" id="quote_home_budget" name="quote_home[budget]" class="form-input" value="0">
+                    </div>
                 </div>
 
                 <div class="flex">
-                    {{ form_row(quoteForm.submit) }}
+                    <div>
+                        <button type="submit" id="quote_home_submit" name="quote_home[submit]">Demander un devis</button>
+                    </div>
                     <div>
                         <a href="">Nous contacter</a>
                     </div>
                 </div>
-            {{ form_end(quoteForm) }}
+            </form>
         </div>
     </div>
 

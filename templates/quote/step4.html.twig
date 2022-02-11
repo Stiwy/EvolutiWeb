@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Demande de devis - Stiwy Caritey{% endblock %}
+
+{% block body %}
+    <div id="page">
+        <div id="progressbar">
+            <section class="bar">
+                <span></span>
+                <div><div></div></div>
+            </section>
+            <a href="{{ path('app_quote_step_1') }}" class="step">
+                <span>Votre projet</span>
+                <div class="step-valid">1</div>
+            </a>
+            <a href="{{ path('app_quote_step_2') }}" class="step">
+                <span>Votre Entreprise</span>
+                <div class="step-valid">2</div>
+            </a>
+            <a href="{{ path('app_quote_step_3') }}" class="step">
+                <span>Vos coordonées</span>
+                <div class="step-valid">3</div>
+            </a>
+            <a href="{{ path('app_quote_step_3') }}" class="step">
+                <span class="span-active">Résultat</span>
+                <div>4</div>
+            </a>
+        </div>
+        <div id="form">
+        </div>
+    </div>
+{% endblock %}
