@@ -2,12 +2,11 @@
 
 namespace App\Controller;
 
-use App\Form\QuoteHomeType;
 use App\Form\QuoteStep1Type;
 use App\Form\QuoteStep2Type;
 use App\Form\QuoteStep3Type;
 use App\Models\Quote;
-use App\Form\QuoteType;
+use App\Service\QuoteService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
@@ -17,6 +16,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\Session;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 
 #[Route('demande-de-devis')]
@@ -87,6 +87,13 @@ class QuoteController extends AbstractController
     {
         $quote = $session->get('quote');
 
-        return $this->render('quote/step4.html.twig');
+        if ($quote) {
+            $quoteService = new QuoteService();
+            $price = $quoteService->calcul($quote);
+
+            return $this->render('quote/step4.html.twig', compact('quote', 'price'));
+        }
+
+        throw new NotFoundHttpException('Les données du devis sont invalides');
     }
 }

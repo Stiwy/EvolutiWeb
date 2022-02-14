@@ -61,12 +61,12 @@ class Quote
         return $this;
     }
 
-    public function getStartProjectDate(): ?\DateTimeInterface
+    public function getStartProjectDate(): ?\DateTime
     {
         return $this->start_project_date;
     }
 
-    public function setStartProjectDate(?\DateTimeInterface $start_project_date): self
+    public function setStartProjectDate(?\DateTime $start_project_date): self
     {
         $this->start_project_date = $start_project_date;
 

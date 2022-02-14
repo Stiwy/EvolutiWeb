@@ -34,10 +34,10 @@ class QuoteStep1Type extends AbstractType
                     'class' => 'form-input'
                 ],
                 'choices' => [
-                    'Site e-commerce' => 'Site_e-commerce',
-                    'Site vitrine' => 'Site_vitrine',
-                    'Site marketplace' => 'Site_marketplace',
-                    'Réseau social' => 'Réseau_social',
+                    'Site e-commerce' => 'Site e-commerce',
+                    'Site vitrine' => 'Site vitrine',
+                    'Site marketplace' => 'Site marketplace',
+                    'Réseau social' => 'Réseau social',
                     'Blog' => 'Blog',
                     'Intranets' => 'Intranets',
                     'Administration' => 'Administration',
@@ -51,10 +51,10 @@ class QuoteStep1Type extends AbstractType
                     new Choice(
                         [
                             'choices' => [
-                                'Site e-commerce' => 'Site_e-commerce',
-                                'Site vitrine' => 'Site_vitrine',
-                                'Site marketplace' => 'Site_marketplace',
-                                'Réseau social' => 'Réseau_social',
+                                'Site e-commerce' => 'Site e-commerce',
+                                'Site vitrine' => 'Site vitrine',
+                                'Site marketplace' => 'Site marketplace',
+                                'Réseau social' => 'Réseau social',
                                 'Blog' => 'Blog',
                                 'Intranets' => 'Intranets',
                                 'Administration' => 'Administration',
@@ -102,7 +102,7 @@ class QuoteStep1Type extends AbstractType
             ])
             ->add('details', TextareaType::class, [
                 'required' => false,
-                'label' => 'Pour faciliter le devis détaillez ajouté des détails ici',
+                'label' => 'Pour faciliter le devis ajouté des détails ici',
                 'label_attr' => [
                     'class' => 'form-label'
                 ],

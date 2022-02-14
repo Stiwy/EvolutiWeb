@@ -26,7 +26,69 @@
                 <div>4</div>
             </a>
         </div>
-        <div id="form">
+        <div id="quote-content">
+            <h2>🎉 Votre devis est terminé 🎉</h2>
+            <p>Voici une première estimation</p>
+            <h3>{{ price }}</h3>
+
+            <p>Ce prix à une valeur estimative, ceci n'est pas un devis définitif. Ce prix à une valeur estimative, ceci n'est pas un devis définitif. Je vous contacterai dans les 24 heures pour étudier avec vous votre projet et établir un devis gratuit.</p>
+
+           <section id="quote-resume">
+                <h3>Récapitulatif</h3>
+                <div>
+                    <div>
+                        <h4>Votre Projet</h4>
+                        <div class="content">
+                            <p class="title"><em>Type de site</em></p>
+                            <p class="info">{{ quote.type }}</p>
+                        </div>
+                        <div class="content">
+                            <p class="title"><em>Creantion d'un espace d'administration </em></p>
+                            <p class="info">{% if quote.adminPanel %} Oui {% else%} Non {% endif %}</p>
+                        </div>
+                        <div class="content">
+                            <p class="title"><em>Budget </em></p>
+                            <p class="info">{{ quote.budget|number_format(0, ',', ' ') }} €</p>
+                        </div>
+                        <div class="content">
+                            <p class="title"><em>Date de début de projet souhaitez</em></p>
+                            <p class="info">{% if quote.startProjectDate  %}{{ quote.startProjectDate|date('d-m-Y') }}{% endif %}</p>
+                        </div>
+                        <div class="content">
+                            <p class="title"><em>Détails</em></p>
+                            <p class="info">{{ quote.details }}</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Votre Entreprise</h4>
+                        <div class="content">
+                            <p class="title"><em>Taille de votre société</em></p>
+                            <p class="info">{{ quote.companySize }}</p>
+                        </div>
+                        <div class="content">
+                            <p class="title"><em>Nom de votre société</em></p>
+                            <p class="info">{{ quote.companyName }}</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Vos coordonnées</h4>
+                        <div class="content">
+                            <p class="title"><em>Nom</em></p>
+                            <p class="info">{{ quote.name }}</p>
+                        </div>
+                        <div class="content">
+                            <p class="title"><em>Téléphone </em></p>
+                            <p class="info">{{ quote.phone }}</p>
+                        </div>
+                        <div class="content">
+                            <p class="title"><em>E-mail</em></p>
+                            <p class="info">{{ quote.email }}</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <span>Ce prix a été calculé sur plusieurs critères dont le type de site et la taille de votre entreprise, car la grosse entreprise sollicite des sites plus complexes que les petites entreprises ou particulier.</span>
         </div>
     </div>
 {% endblock %}

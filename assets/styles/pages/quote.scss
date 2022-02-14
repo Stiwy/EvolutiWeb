@@ -75,7 +75,32 @@
  }
 }
 
-#form {
+#quote-content {
+  > h2 {
+    color: green;
+    font-family: rounded-bold;
+    text-align: center;
+  }
+
+  > p {
+    text-align: center;
+    color: gray;
+  }
+
+  > span {
+    color: gray;
+    font-size: .8rem;
+    font-family: rounded-light;
+    text-align: center;
+  }
+
+  > h3 {
+    color: lightblue;
+    font-family: rounded-bold;
+    text-align: center;
+    font-size: 2rem;
+  }
+
   margin-left: 20px;
   margin-bottom: 200px;
   width: 70%;
@@ -98,5 +123,35 @@
   form a {
     background: #125771;
     text-decoration: none;
+  }
+}
+
+#quote-resume {
+
+  h3 {
+    font-size: 1.5rem;
+    margin: 50px 0 0 0;
+    color: gray;
+  }
+
+  > div {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    h4 {
+      color: lightblue;
+      font-family: rounded-bold;
+      font-size: 1.2rem;
+    }
+
+    .title {
+      font-size: .8rem;
+      margin: 0;
+    }
+
+    .info {
+      margin: 0 0 20px 0;
+      color: #f88379;
+    }
   }
 }
