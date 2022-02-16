@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Me contacter{% endblock %}
+
+{% block body %}
+    <section id="contact">
+        <h1>Me contacter</h1>
+
+        <div>
+            <div class="left">
+                {{ form_start(form) }}
+                    {% if app.session.flashbag %}
+                    <div class="flash flash-success">
+                        <span class="bold">Succès : </span> {{ app.session.flashbag.get('success')[0] }}
+                    </div>
+                    {% endif %}
+
+                    <div>
+                        <span class="form-span">{{ form_label(form.name) }} *</span>
+                        {{ form_widget(form.name) }}
+                    </div>
+                    <div>
+                        {{ form_label(form.phone) }}
+                        {{ form_widget(form.phone) }}
+                    </div>
+                    <div>
+                        <span class="form-span">{{ form_label(form.email) }} *</span>
+                        {{ form_widget(form.email) }}
+                    </div>
+                    <div>
+                        <span class="form-span">{{ form_label(form.details) }} *</span>
+                        {{ form_widget(form.details) }}
+                    </div>
+
+                    <div>
+                        {{ form_row(form.submit) }}
+                    </div>
+
+                    <em class="form-em">Les champs précédé de <span class="form-span">*</span> sont obligatoire</em>
+                {{ form_end(form) }}
+            </div>
+            <div class="right">
+                <div id="visit-cart" data-aos="fade-left" data-aos-easing="ease-out" data-aos-duration="2000">
+                    <img src="{{ asset('assets/logo.png') }}" alt="Stiwy Caritey - Développement et création de site web sur-mesure">
+                    <h2>Creation de site web sur-mesure</h2>
+                    <div class="coordonate">
+                        <div>
+                            <i class="fa-solid fa-phone"></i>
+                            <a href="tel:0768644285">07 68 64 42 85</a>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:caritey@protonmail.com">caritey@protonmail.com</a>
+                        </div>
+                    </div>
+
+                    <span>Des prix qui s’adapte au petites commme au grandes entreprises</span>
+                </div>
+                <div id="networks">
+                    <a href="" data-aos="fade-zoom-in" data-aos-easing="ease-out" data-aos-duration="2000"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="" data-aos="fade-zoom-in" data-aos-easing="ease-out" data-aos-duration="2000"><i class="fa-brands fa-facebook-square"></i></a>
+                    <a href="" data-aos="fade-zoom-in" data-aos-easing="ease-out" data-aos-duration="2000"><i class="fa-brands fa-github-square"></i></a>
+                    <a href="" data-aos="fade-zoom-in" data-aos-easing="ease-out" data-aos-duration="2000"><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href="" data-aos="fade-zoom-in" data-aos-easing="ease-out" data-aos-duration="2000"><i class="fa-brands fa-instagram-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

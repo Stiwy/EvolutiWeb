@@ -155,3 +155,31 @@
     }
   }
 }
+
+@media screen and (max-width: 580px) {
+  #progressbar {
+    width: 50px;
+    margin-left: 20px;
+
+    .bar, .step {
+      justify-content: left;
+
+      span {
+        display: none;
+      }
+    }
+  }
+
+  #quote-content > p {
+    font-size: .9rem;
+  }
+
+  #quote-resume > div {
+      display: grid;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+
+      > div {
+        border-bottom: 1px solid lightgray;
+      }
+  }
+}

@@ -1,90 +1,90 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Stiwy Caritey{% endblock %}
-
 {% block body %}
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 
     <div id="hero">
         <div id="hero-bg" class="pt-20"></div>
-        <div id="hero-left">
-            <b>Des prix qui s'adapte au petite comme au grande entreprise.</b>
-            <h3>Création de site vitrine, e-commerce, application web ERP / CRM sur-mesure.</h3>
-        </div>
-        <div id="hero-right">
-            {% include '/home/_slider.html.twig' %}
-        </div>
+        <div id="hero-content">
+            <div id="hero-left">
+                <span class="ml3">Des  prix  qui  s'adapte  au  petite  comme  au  grande  entreprise.</span>
+                <h1>Création de site web sur-mesure : site vitrine, e-commerce, application web ERP / CRM.</h1>
 
-        <div id="hero-advantage">
-            <form name="quote_home" method="post" action="{{ path('app_quote_step_1') }}">
-                <div class="flex">
-                    <div>
-                        <label class="form-label required" for="quote_home_type">Que souhaitez-vous créer ?</label>
-                        <select id="quote_home_type" name="quote_home[type]" class="form-input">
-                            <option value="Site_e-commerce">Site e-commerce</option>
-                            <option value="Site_vitrine">Site vitrine</option>
-                            <option value="Site_marketplace">Site marketplace</option>
-                            <option value="Réseau_social">Réseau social</option>
-                            <option value="Blog">Blog</option>
-                            <option value="Intranets">Intranets</option>
-                            <option value="Administration">Administration</option>
-                            <option value="ERP">ERP</option>
-                            <option value="CRM">CRM</option>
-                            <option value="Autre">Autre</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="form-label" for="quote_home_budget">Budget pour le projet</label>
-                        <input type="number" id="quote_home_budget" name="quote_home[budget]" class="form-input" value="0">
-                    </div>
-                </div>
+                <div id="hero-quote" data-aos="fade-up-right" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                    <form name="quote_home" method="post" action="{{ path('app_quote_step_1') }}">
+                        <div class="flex">
+                            <div>
+                                <label class="form-label required" for="quote_home_type">Que souhaitez-vous créer ?</label>
+                                <select id="quote_home_type" name="quote_home[type]" class="form-input">
+                                    <option value="Site_e-commerce">Site e-commerce</option>
+                                    <option value="Site_vitrine">Site vitrine</option>
+                                    <option value="Site_marketplace">Site marketplace</option>
+                                    <option value="Réseau_social">Réseau social</option>
+                                    <option value="Blog">Blog</option>
+                                    <option value="Intranets">Intranets</option>
+                                    <option value="Administration">Administration</option>
+                                    <option value="ERP">ERP</option>
+                                    <option value="CRM">CRM</option>
+                                    <option value="Autre">Autre</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="form-label" for="quote_home_budget">Budget pour le projet</label>
+                                <input type="number" id="quote_home_budget" name="quote_home[budget]" class="form-input" value="0">
+                            </div>
+                        </div>
 
-                <div class="flex">
-                    <div>
-                        <button type="submit" id="quote_home_submit" name="quote_home[submit]">Demander un devis</button>
-                    </div>
-                    <div>
-                        <a href="">Nous contacter</a>
-                    </div>
+                        <div class="flex">
+                            <div>
+                                <button type="submit" id="quote_home_submit" name="quote_home[submit]">Demander un devis</button>
+                            </div>
+                            <div>
+                                <a href="{{ path('app_contact') }}">Nous contacter</a>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-            </form>
+            </div>
+            <div id="hero-right">
+                {% include '/home/_slider.html.twig' %}
+            </div>
         </div>
     </div>
 
     <div id="home-1">
-        <p>Nos points forts</p>
+        <h2>Les avantages d'un développeur freelance</h2>
         <div class="flex">
-            <div>
+            <div data-aos="zoom-out-up" data-aos-anchor-placement="center-bottom" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                 <i class="fas fa-ruler"></i>
                 <h3>Un site sûr mesure</h3>
                 <p>Nous étudions ensemble vos besoins afin d'établir un cahier des charges et des modèles qui répondent à vos attentes.</p>
             </div>
-            <div>
+            <div data-aos="zoom-out-up" data-aos-anchor-placement="center-bottom" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                 <i class="fas fa-hand-holding-usd"></i>
                 <h3>Des tarif adapté aux besoins</h3>
-                <p>Nos tarif sont évaluer selon, la compléxité du projet et le temps de création. </p>
+                <p>Nos tarifs sont évalués, selon la compléxité du <b>site</b> et le temps de création. </p>
             </div>
-            <div>
+            <div data-aos="zoom-out-up" data-aos-anchor-placement="center-bottom" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                 <i class="fas fa-binoculars"></i>
                 <h3>Un suivi constant du projet</h3>
                 <p>Nous étudions ensemble vos besoins afin d'établir un cahier des charges et des modèles qui répondent à vos attentes.</p>
             </div>
-            <div>
+            <div data-aos="zoom-out-up" data-aos-anchor-placement="center-bottom" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                 <i class="fas fa-file-invoice-dollar"></i>
                 <h3>Des devis gratuit</h3>
                 <p>Nous établissons un pré-devis en ligne puis un devis complet par mail ou téléphone gratuitement.</p>
             </div>
-            <div>
+            <div data-aos="zoom-out-up" data-aos-anchor-placement="center-bottom" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                 <i class="fas fa-briefcase"></i>
                 <h3>A distance ou en présentiel</h3>
-                <p>Afin de facilité les échange, je peux me déplacer dans vos locaux, pour des rendez-vous ou pour de la formation.</p>
+                <p>Afin de faciliter les échanges, je peux me déplacer dans vos locaux, pour des rendez-vous ou pour de la formation.</p>
             </div>
         </div>
     </div>
 
-    <div id="hero-2">
+    <div id="home-2">
         <div class="border-top"></div>
-        <p>Déroulement du projet</p>
+        <h2>Déroulement de la création de votre site</h2>
         <div>
             <div class="bar">
                 <div class="left"></div>
@@ -93,127 +93,142 @@
             </div>
             <div class="items">
                 <div class="left"></div>
-                <div class="circle">
-                    1
-                </div>
-                <div class="right content">
+                <div class="circle" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-offset="300">1</div>
+                <div class="right content" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <h5>Réalisation du devis</h5>
-                    <p>Réaliser une demande de devis en ligne. Puis nos vous répondons par e-mail afin de vous proposer un premier devis gratuit fondé sur les informations fournies.</p>
+                    <p>Réaliser une demande de devis en ligne. Puis je vous répondrai par e-mail afin de vous proposer un premier devis gratuit fondé sur les informations fournies.</p>
                 </div>
             </div>
             <div class="items">
-                <div class="left content">
+                <div class="left content" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <h5>Rendez-vous</h5>
-                    <p>Parlons de votre projet ensemble lors d'un rendez-vous (En présentiel où à distance), et convenons des détails du projet ensemble affin détaillé vos attentes et vos besoins. Nous pourrons ainsi convenir du prix final</p>
+                    <p>Parlons de votre projet ensemble lors d'un rendez-vous (En présentiel où à distance), et convenons des détails du <b>site</b> ensemble affin de comprendre vos attentes et vos besoins. Nous pourrons ainsi convenir du prix final</p>
                 </div>
-                <div class="circle">2</div>
-                <div class="right"></div>
+                <div class="circle" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-offset="300">2</div>
+                <div class="right content hidden" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                    <h5>Rendez-vous</h5>
+                    <p>Parlons de votre projet ensemble lors d'un rendez-vous (En présentiel où à distance), et convenons des détails du <b>site</b> ensemble affin de comprendre vos attentes et vos besoins. Nous pourrons ainsi convenir du prix final</p>
+                </div>
             </div>
             <div class="items">
                 <div class="left"></div>
-                <div class="circle">3</div>
-                <div class="right content">
+                <div class="circle" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-offset="300">3</div>
+                <div class="right content" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <h5>Présentation du projet</h5>
-                    <p>Je vous présente des model graphiques de votre site, avant début de la création.</p>
+                    <p>Je vous présente des models graphiques de votre site, avant le début de la création.</p>
                 </div>
 
             </div>
             <div class="items">
-                <div class="left content">
-                    <h5>Réalisation</h5>
-                    <p>Je développe le site, tout en vous laissant l'accès à ce dernier pour voir l'avancée du projet.</p>
+                <div class="left content" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                    <h5>Réalisation du site</h5>
+                    <p>Je <b>développe le site</b>, tout en vous laissant l'accès à ce dernier pour voir l'avancée du projet.</p>
                 </div>
-                <div class="circle">4</div>
-                <div class="right"></div>
+                <div class="circle" data-aos="fade-zoom-in"
+                     data-aos-easing="ease-in-sine"
+                     
+                     data-aos-offset="300">4</div>
+                <div class="right content hidden" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                    <h5>Réalisation du site</h5>
+                    <p>Je <b>développe le site</b>, tout en vous laissant l'accès à ce dernier pour voir l'avancée du projet.</p>
+                </div>
             </div>
             <div class="items">
                 <div class="left"></div>
-                <div class="circle">5</div>
-                <div class="right content">
+                <div class="circle" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-offset="300">5</div>
+                <div class="right content" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <h5>Vérification</h5>
-                    <p>À la fin du développement nous vérifions ensemble que le site convient à vos attentes et nous procédons au dernier test.</p>
+                    <p>À la fin du <b>développement</b> nous vérifions ensemble que le <b>site</b> convient à vos attentes et nous procédons au dernier test.</p>
                 </div>
             </div>
             <div class="items">
-                <div class="left content">
+                <div class="left content" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <h5>Présentation et formation</h5>
-                    <p>Je procècede à la présentation complète du site et à la formation de l'utilisation de ce dernier.</p>
+                    <p>Je procècede à la présentation complète du <b>site</b> et à la formation de l'utilisation de ce dernier.</p>
                 </div>
-                <div class="circle">6</div>
-                <div class="right"></div>
+                <div class="circle" data-aos="fade-zoom-in"
+                     data-aos-easing="ease-in-sine"
+                     
+                     data-aos-offset="300">6</div>
+                <div class="right content hidden" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                    <h5>Présentation et formation</h5>
+                    <p>Je procècede à la présentation complète du <b>site</b> et à la formation de l'utilisation de ce dernier.</p>
+                </div>
             </div>
             <div class="items">
                 <div class="left"></div>
-                <div class="circle">7</div>
-                <div class="right content">
+                <div class="circle" data-aos="fade-zoom-in"
+                     data-aos-easing="ease-in-sine"
+                     
+                     data-aos-offset="300">7</div>
+                <div class="right content" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <h5>Support</h5>
-                    <p>En cas de problème, de nouveau développement, ou de mises à jour je reste disponible pour vous aider à faire évoluer votre site.</p>
+                    <p>En cas de problème, de nouveau <b>développement</b>, ou de mises à jour je reste disponible pour vous aider à faire <b>évoluer votre site</b>.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="hero-3">
+    <div id="home-3">
         <div class="border-top"></div>
-        <p>Mon expertise</p>
+        <h2>Mon expertise pour vos sites web</h2>
 
         <div class="grid">
-            <div class="case">
-                <img src="{{ asset('assets/site_vitrine.png') }}" alt="">
+            <div class="case" data-aos="fade-up" data-aos-duration="3000">
+                <img src="{{ asset('assets/site_vitrine.png') }}" alt="Développement d'un site vitrine">
                 <div>
-                    <p>Site vitrine</p>
+                    <p><b>Site vitrine</b></p>
                 </div>
             </div>
-            <div class="case">
-                <img src="{{ asset('assets/e-commerce.png') }}" alt="">
+            <div class="case" data-aos="fade-up" data-aos-duration="3000">
+                <img src="{{ asset('assets/e-commerce.png') }}" alt="Développement d'un e-commerce">
                 <div>
-                    <p>E-commerce</p>
+                    <p><b>E-commerce</b></p>
                 </div>
             </div>
-            <div class="case">
-                <img src="{{ asset('assets/marketplace.png') }}" alt="">
+            <div class="case" data-aos="fade-up" data-aos-duration="3000">
+                <img src="{{ asset('assets/marketplace.png') }}" alt="Développement d'une marketplace">
                 <div>
-                    <p>Marketplace</p>
+                    <p><b>Marketplace</b></p>
                 </div>
             </div>
-            <div class="case">
-                <img src="{{ asset('assets/reseau_social.png') }}" alt="">
+            <div class="case" data-aos="fade-up" data-aos-duration="3000">
+                <img src="{{ asset('assets/reseau_social.png') }}" alt="Développement d'un reseau social">
                 <div>
-                    <p>Réseau social</p>
+                    <p><b>Réseau social</b></p>
                 </div>
             </div>
-            <div class="case">
-                <img src="{{ asset('assets/blog.png') }}" alt="">
+            <div class="case" data-aos="fade-up" data-aos-duration="3000">
+                <img src="{{ asset('assets/blog.png') }}" alt="Développement d'un blog">
                 <div>
-                    <p>Blog</p>
+                    <p><b>Blog</b></p>
                 </div>
             </div>
-            <div class="case">
-                <img src="{{ asset('assets/administration.png') }}" alt="">
+            <div class="case" data-aos="fade-up" data-aos-duration="3000">
+                <img src="{{ asset('assets/administration.png') }}" alt="Développement d'un espace d'administration">
                 <div>
-                    <p>Administration</p>
+                    <p><b>Administration</b></p>
                 </div>
             </div>
-            <div class="case">
-                <img src="{{ asset('assets/intranet.png') }}" alt="">
+            <div class="case" data-aos="fade-up" data-aos-duration="3000">
+                <img src="{{ asset('assets/intranet.png') }}" alt="Développement d'un intranet">
                 <div>
-                    <p>Intranet</p>
+                    <p><b>Intranet</b></p>
                 </div>
             </div>
-            <div class="case">
-                <img src="{{ asset('assets/erp.png') }}" alt="">
+            <div class="case" data-aos="fade-up" data-aos-duration="3000">
+                <img src="{{ asset('assets/erp.png') }}" alt="Développement d'un ERP">
                 <div>
-                    <p>ERP</p>
+                    <p><b>ERP</b></p>
                 </div>
             </div>
-            <div class="case">
-                <img src="{{ asset('assets/crm.png') }}" alt="">
+            <div class="case" data-aos="fade-up" data-aos-duration="3000">
+                <img src="{{ asset('assets/crm.png') }}" alt="Développement d'un CRM">
                 <div>
-                    <p>CRM</p>
+                    <p><b>CRM</b></p>
                 </div>
             </div>
         </div>
-
     </div>
 
 {% endblock %}

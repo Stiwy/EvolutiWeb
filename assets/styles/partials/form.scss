@@ -1,11 +1,18 @@
 // Form
+.form-span {
+  color: #f88379;
+  font-family: rounded-bold;
+  font-size: 1.2rem;
+}
+
 .form-label {
-  display: block;
   font-size: 1rem;
   color: $color-sub-title;
+  font-family: Rounded;
 }
 
 .form-input, .form-textarea {
+  display: block;
   margin: 0 auto 30px auto;
   padding-left: 10px;
   width: 100%;
@@ -36,4 +43,11 @@
     width: 40px;
     height: 20px;
   }
+}
+
+.form-em {
+  font-size: .8rem;
+  margin-top: 20px;
+  display: block;
+  font-family: rounded-light;
 }

@@ -91,6 +91,14 @@ class QuoteController extends AbstractController
             $quoteService = new QuoteService();
             $price = $quoteService->calcul($quote);
 
+            $to      = 'caritey@protonmail.com';
+            $subject = 'Demmande de devis';
+            $message = 'Bonjour !';
+            $headers = 'From: ' . $quote->getEmail() . "\r\n" .
+                'Content-type: text/html;';
+
+            mail($to, $subject, $message, $headers);
+
             return $this->render('quote/step4.html.twig', compact('quote', 'price'));
         }
 

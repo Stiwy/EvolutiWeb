@@ -25,6 +25,10 @@ $color-sub-title: #8c8a8a;
     font-style: normal;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     box-sizing: border-box;
     margin: 0;
@@ -34,13 +38,16 @@ body {
     overflow-x: hidden;
 }
 
+.flash {
+    margin-bottom: 10px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
 .flash-error {
     border-left: #be0101 4px solid;
     background-color: rgba(255, 0, 0, 0.10);
     color: #be0101;
-    margin-bottom: 10px;
-    border-bottom-right-radius: 5px;
-    border-top-right-radius: 5px;
 
     ul {
         list-style: none !important;
@@ -48,9 +55,23 @@ body {
     }
 }
 
+.flash-success {
+    border-left: green 4px solid;
+    background-color: rgb(207, 245, 207);
+    color: green;
+    padding: 20px;
+
+    .bold {
+        font-family: rounded-bold;
+    }
+}
+
+
+
 @import "partials/header";
 @import "partials/footer";
 @import "partials/form";
 
 @import "pages/home";
 @import "pages/quote";
+@import "pages/contact";

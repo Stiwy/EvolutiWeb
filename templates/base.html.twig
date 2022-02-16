@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html>
-    <head>
+    <head xmlns:og="http://ogp.me/ns#">
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <meta name="description" content="Stiwy Caritey - Développeur freelance. Création de site web sûr-mesure pour les particuliers et les professionnels dans les Vosges (88). Des prix à tous, et un devis gratuit. Booster votre activité avec un site web à votre image et un référencement de qualité." />
+        <meta name="title" content="Stiwy Caritey - Développement et création de site web dans les Vosges. Référencement naturel. Développement PHP, Symfony. Développeur freelance." />
+
+        <meta property="og:title" content="Stiwy Caritey - Développement et création de site web dans les Vosges." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="http://www.stiwy-caritey.com/" />
+        <meta property="og:image" content="http://www.stiwy-caritey.com/public/asset/logo.png" />
+        <meta property="og:site_name" content="Stiwy Caritey - Développement de site web dans les Vosges" />
+
+        <title>{% block title %}Stiwy Caritey - Développement de site web dans les Vosges{% endblock %}</title>
         <link rel="icon" href="{{ asset('favicon.ico') }}">
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
@@ -10,8 +19,11 @@
         {% endblock %}
 
         {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
         {% endblock %}
+
+        {{ encore_entry_script_tags('app') }}
+
+        <meta >
     </head>
     <body>
         <!--- Header -->
@@ -23,5 +35,7 @@
         </div>
 
         {% include "/partials/_footer.html.twig" %}
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     </body>
 </html>

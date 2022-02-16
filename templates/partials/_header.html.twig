@@ -1,3 +1,25 @@
 <header>
-    <img src="{{ asset('assets/logo+slogan.png') }}" alt="" width="200">
+    <div>
+        <span class="logo">
+             <a href="{{ path('app_home') }}"><img src="{{ asset('assets/logo+slogan.png') }}" alt="" width="200"></a>
+        </span>
+
+        <nav>
+            <ul>
+                <li>
+
+                    <a class="{% if app.request.attributes.get('_route') == 'app_home' %}actif{% endif %}" href="{{ path('app_home') }}">Accueil</a>
+                </li>
+                <li>
+                    <a class="{% if app.request.attributes.get('_route') == 'app_quote_step_1' %}actif{% endif %}" href="{{ path('app_quote_step_1') }}">Créer un devis</a>
+                </li>
+                <li>
+                    <a class="{% if app.request.attributes.get('_route') == 'app_contact' %}actif{% endif %}" href="{{ path('app_contact') }}">Me contacter</a>
+                </li>
+                <li>
+                    <a class="follow-project" href="{{ path('app_contact') }}">Suivre mon projet</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>

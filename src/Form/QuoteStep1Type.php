@@ -47,7 +47,6 @@ class QuoteStep1Type extends AbstractType
                 ],
                 'constraints' => [
                     new NotBlank(),
-                    new Regex("/^[a-zé'-_]+$/"),
                     new Choice(
                         [
                             'choices' => [
@@ -76,7 +75,7 @@ class QuoteStep1Type extends AbstractType
                     'class' => 'form-input'
                 ],
                 'constraints' => [
-                    new Regex('/^[0-9\s]*[0-9€]+$/')
+                    new Regex('/^[0-9\s€]*[0-9€]+$/')
                 ]
             ])
             ->add('admin_panel', CheckboxType::class, [
